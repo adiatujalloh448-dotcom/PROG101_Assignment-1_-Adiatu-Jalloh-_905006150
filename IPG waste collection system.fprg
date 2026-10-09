@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="flowchart"/>
+        <attribute name="authors" value="MCS"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-10-04 10:37:28 AM"/>
+        <attribute name="created" value="TUNTO0RFU0tUT1AtMUdIMUpEODsyMDI2LTEwLTA0OzA5OjAzOjQxIEFNOzI1MTA="/>
+        <attribute name="edited" value="TUNTO0RFU0tUT1AtMUdIMUpEODsyMDI2LTEwLTA0OzEwOjM3OjI4IEFNOzc7MjYyOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body/>
+    </function>
+    <function name="start" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;community waste collection and reporting system&quot;" newline="True"/>
+            <input variable="choice"/>
+            <declare name="choice" type="Integer" array="False" size=""/>
+            <do expression="choice = 4"/>
+            <output expression="&quot;1. report waste problem&quot;&#13;&#10;&quot;2. view report&quot;&#13;&#10;&quot;3. update report&quot;&#13;&#10;&quot;4. exit&quot;" newline="True"/>
+            <input variable="choice"/>
+            <if expression="choice=1">
+                <then>
+                    <input variable="location, wastetype, description, date"/>
+                </then>
+                <else/>
+            </if>
+            <if expression="location = &quot;&quot;OR wastetype = &quot;&quot;OR description =&quot;&quot;">
+                <then>
+                    <input variable="&quot;please provide all required information.&quot;"/>
+                </then>
+                <else>
+                    <assign variable="status" expression="pending"/>
+                </else>
+            </if>
+            <output expression="&quot;waste report submitted successfully&quot;" newline="True"/>
+            <if expression="choice=2">
+                <then/>
+                <else/>
+            </if>
+            <output expression="&quot;displaying all available reports...&quot;" newline="True"/>
+            <if expression="choice=3">
+                <then/>
+                <else/>
+            </if>
+            <input variable="report"/>
+            <if expression="report exist">
+                <then/>
+                <else/>
+            </if>
+            <input variable="newstatus"/>
+            <assign variable="status" expression="newstatus"/>
+            <output expression="&quot;report update successfully.&quot;" newline="True"/>
+            <output expression="&quot;otherwise report not found&quot;" newline="True"/>
+            <do expression="choice=4"/>
+            <output expression="&quot;thank you for using the system&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
